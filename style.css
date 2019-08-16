@@ -501,6 +501,7 @@ a {
 .progress-c p {
     /* border: 2px solid #2ed573;*/
     padding: 5px;
+    text-align: center;
 }
 
 .progress-cirlce {
@@ -540,14 +541,39 @@ a {
 
 .progress-cirlce::before {
     content: "";
-    background-image: linear-gradient(0.8deg, #ff7f50 50%, transparent 50%, transparent), linear-gradient(270deg, #ff7f50 50%, #ebebeb 50%, #ebebeb);
+    /* background-image: linear-gradient(0.8deg, #ff7f50 50%, transparent 50%, transparent), linear-gradient(270deg, #ff7f50 50%, #ebebeb 50%, #ebebeb);*/
     position: absolute;
     z-index: 1;
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+
+.progress-circle-75 {
+    background-image: linear-gradient(1.8deg, #4cd137 50%, transparent 50%, transparent), linear-gradient(270deg, #4cd137 50%, #ebebeb 50%, #ebebeb);
     animation-name: circle;
     animation-duration: 2s;
+}
+
+.progress-circle-70 {
+    background-image: linear-gradient(335deg, #ff7f50 50%, transparent 50%, transparent), linear-gradient(270deg, #ff7f50 50%, #ebebeb 50%, #ebebeb);
+    animation-name: circle;
+    animation-duration: 2s;
+}
+
+.progress-circle-50 {
+    background-image: linear-gradient(-90deg, #4cd137 50%, transparent 50%, transparent), linear-gradient(270deg, #4cd137 50%, #ebebeb 50%, #ebebeb);
+    animation-name: circle;
+    animation-duration: 2s;
+}
+
+
+/*Sản phẩm section*/
+
+.sp-section,
+.sanpham {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes circle {
@@ -559,22 +585,6 @@ a {
         opacity: 1;
         transform: rotate(360deg);
     }
-}
-
-.progress-c:nth-child(1) .progress-cirlce::before {
-    background-image: linear-gradient(0.8deg, #ea5929 50%, transparent 50%, transparent), linear-gradient(270deg, #ea5929 50%, #ebebeb 50%, #ebebeb);
-}
-
-.progress-c:nth-child(2) .progress-cirlce::before {
-    background-image: linear-gradient(-90deg, #4cd137 50%, transparent 50%, transparent), linear-gradient(270deg, #4cd137 50%, #ebebeb 50%, #ebebeb);
-}
-
-.progress-c:nth-child(3) .progress-cirlce::before {
-    background-image: linear-gradient(-90deg, #61dafb 50%, transparent 50%, transparent), linear-gradient(270deg, #61dafb 50%, #ebebeb 50%, #ebebeb);
-}
-
-.progress-c:nth-child(4) .progress-cirlce::before {
-    background-image: linear-gradient(-90deg, #026e00 50%, transparent 50%, transparent), linear-gradient(270deg, #026e00 50%, #ebebeb 50%, #ebebeb);
 }
 
 @media only screen and (max-width:1280px) {
@@ -610,6 +620,13 @@ a {
     .box-icon img {
         width: 45px;
         height: 45px;
+    }
+    .progress-cirlce {
+        width: 80px;
+        height: 80px;
+    }
+    .nav {
+        width: 30%;
     }
 }
 

@@ -1,8 +1,6 @@
 $(function() {
+    var widthWindow = $(window).width();
 
-    /*var heightContent = $("#mynav").height();
-    var widthWindown = $(windown).height;
-    $(".content").css("height", heightContent.toString());*/
     $('.nav-link').on('click', function(event) {
         event.preventDefault();
 
@@ -22,22 +20,29 @@ $(function() {
             }
 
         })
+
+        if (widthWindow < 480) {
+            responsiveNav();
+        }
     })
 
     $('.icon').on('click', function(event) {
         event.preventDefault();
-        if ($('#mynav').hasClass("responsive")) {
-            $('#mynav').removeClass("responsive");
-            $(".nav-link").each(function(index) {
-                $(this).css("display", "none");
-            })
-            console.log($(this));
-        } else {
-            $('#mynav').addClass("responsive");
-            $(".nav-link").each(function(index) {
-                $(this).css({ "display": "flex", "margin-left": "20px" });
-            })
-        }
+        responsiveNav();
     })
 
 })
+
+function responsiveNav() {
+    if ($('#mynav').hasClass("responsive")) {
+        $('#mynav').removeClass("responsive");
+        $(".nav-link").each(function(index) {
+            $(this).css("display", "none");
+        })
+    } else {
+        $('#mynav').addClass("responsive");
+        $(".nav-link").each(function(index) {
+            $(this).css({ "display": "flex", "margin-left": "20px" });
+        })
+    }
+}
